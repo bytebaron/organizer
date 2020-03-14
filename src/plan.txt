@@ -1,0 +1,26 @@
+- use unit testing 
+
+- Day routine
+    - Put in a fancy table (React table/material UI skin)
+        - Row selection
+        - Row expansion - Ability to add a task with sub-tasks i.e: cleaning > clean bathroom, clean sink 
+        - Editable data - edit most fields 
+        - Drag and drop 
+        - Add a material UI skin 
+    - Add the ability to add new items to the table with a form
+        - Make sure the form has good validation and utilizes chips 
+    - Add the ability to reorder the rows 
+    - Add the ability to edit the rows without bringing up a seperate form 
+    - Add the ability to delete the rows without bringing up a seperate form 
+    - Let rows be selected as complete for the day and uncomplete
+    - Storage: PostGres or Oracle or Mongo?
+    
+- To-do list
+    - table
+    - Form to add new tasks
+    - Pretty much the same as the above
+
+- Deploy to Electron and use as a desktop app 
+
+- Should I allow it to send push notifications?
+- Stats/charts? 
