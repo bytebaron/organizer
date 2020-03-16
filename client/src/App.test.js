@@ -8,3 +8,4 @@ it("displays the table", () => {
   expect(getByTestId("table")).toBeInTheDocument();
 })
 
+

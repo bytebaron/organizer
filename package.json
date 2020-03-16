@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/bytebaron/organizer/issues"
   },
-  "homepage": "https://github.com/bytebaron/organizer#readme"
+  "homepage": "https://github.com/bytebaron/organizer#readme",
+  "dependencies": {}
 }
