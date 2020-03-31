@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sh '''
 			cd client
-			./jenkins/scripts/test.sh'
+			./jenkins/scripts/test.sh
 		'''
             }
         }
