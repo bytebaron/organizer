@@ -20,6 +20,7 @@ pipeline {
         stage('Test') { 
             steps {
                 sh '''
+			node --version
 			cd client
 			../jenkins/scripts/test.sh
 		'''
