@@ -16,10 +16,10 @@ pipeline {
         }
         stage('Test') { 
             steps {
-		dir("${env.WORKSPACE}/client"){
-   			 sh './jenkins/scripts/test.sh'
-		}
-                #sh './client/jenkins/scripts/test.sh' 
+                sh '''
+			cd /client
+			./jenkins/scripts/test.sh'
+		''' 
             }
         }
     }
