@@ -37,7 +37,7 @@ pipeline {
     stage('Release') {
         steps {
             sshagent (credentials: ['SSH_KEY']) { 
-                sh ('scp build 0.0.0.0:/var/www/') 
+                sh ('scp -o StrictHostKeyChecking=no -r public/* bytebaron@bytebaron-VirtualBox:/var/www/') 
             }
         }
     }
