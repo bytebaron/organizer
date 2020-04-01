@@ -42,8 +42,8 @@ function App() {
     {time: "10:00", description: "123143."}, 
     {time: "11:00", description: "4324234"},
   ]
-  const [newItemModal, openCloseModal] = useState(false); 
-  const [currentData, updateData] = useState(data)
+  // const [newItemModal, openCloseModal] = useState(false); 
+  // const [currentData, updateData] = useState(data)
   
 
   const columns = React.useMemo(
@@ -63,28 +63,28 @@ function App() {
     ], []
   )
 
-  function handleOpen() {
-    openCloseModal(true);
-  }
+  // function handleOpen() {
+  //   openCloseModal(true);
+  // }
 
-  function handleClose() {
-    openCloseModal(false); 
-  }
+  // function handleClose() {
+  //   openCloseModal(false); 
+  // }
 
-  function addNewItem(item) {
-    let tempCurrentData = [...currentData];
-    tempCurrentData.push(item);
-    updateData(tempCurrentData);
+  // function addNewItem(item) {
+  //   let tempCurrentData = [...currentData];
+  //   tempCurrentData.push(item);
+  //   updateData(tempCurrentData);
   }
 
   return (
-    <Container className="app" disableGutters maxWidth="false">
-      {newItemModal ? <NewItemModal handleClose={handleClose} addNewItem={addNewItem} /> : null}
-      <Button onClick={() => openCloseModal(true)} variant="contained" color="primary">Add new item</Button>
+    // <Container className="app" disableGutters maxWidth="false">
+    //   {newItemModal ? <NewItemModal handleClose={handleClose} addNewItem={addNewItem} /> : null}
+    //   <Button onClick={() => openCloseModal(true)} variant="contained" color="primary">Add new item</Button>
       <Styles>
         <Table dti={"table"} columns={columns} data={currentData}/>
       </Styles>
-    </Container>
+    // </Container>
   );
 }
 

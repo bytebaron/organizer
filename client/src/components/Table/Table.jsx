@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { useTable } from 'react-table'
-import { DndProvider, useDrag, useDrop } from 'react-dnd'
-import HTML5Backend from 'react-dnd-html5-backend'
-import update from 'immutability-helper'
+import React, from 'react';
+//import { useTable } from 'react-table'
+//import { DndProvider, useDrag, useDrop } from 'react-dnd'
+//import HTML5Backend from 'react-dnd-html5-backend'
+//import update from 'immutability-helper'
 
 export default function Table({dti, columns, data}) {
     const [records, setRecords] = React.useState(data);
