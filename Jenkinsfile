@@ -31,7 +31,7 @@ pipeline {
 		   sh '''
 		   	cd client
 			../jenkins/scripts/deliver.sh
-			mv build /var/www
+			sudo mv build /var/www
 		   '''
 		}
 	}
