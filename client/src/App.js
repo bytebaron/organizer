@@ -82,7 +82,7 @@ function App() {
     //   {newItemModal ? <NewItemModal handleClose={handleClose} addNewItem={addNewItem} /> : null}
     //   <Button onClick={() => openCloseModal(true)} variant="contained" color="primary">Add new item</Button>
       
-        <table dti={"table"}/>
+        <table data-testid={"table"}/>
       
     // </Container>
   );
