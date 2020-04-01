@@ -75,7 +75,7 @@ function App() {
   //   let tempCurrentData = [...currentData];
   //   tempCurrentData.push(item);
   //   updateData(tempCurrentData);
-  }
+  
 
   return (
     // <Container className="app" disableGutters maxWidth="false">
