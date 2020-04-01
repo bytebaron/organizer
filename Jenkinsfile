@@ -36,7 +36,10 @@ pipeline {
 	}
     stage('Release') {
         steps {
-            sshagent (credentials: ['SSH-KEY']) { 
+            environment {
+                SSH-KEY = credentials('SSH-KEY')
+            }
+            sshagent (credentials: [SSH-KEY]) { 
                 sh ('scp foo apache:/var/www/') 
             }
         }
