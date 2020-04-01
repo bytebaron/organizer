@@ -30,8 +30,9 @@ pipeline {
 		steps {
             sh '''
                 cd client
-                ../jenkins/scripts/deliver.sh
+                npm run build
             '''
+           // ../jenkins/scripts/deliver.sh
 		}
 	}
     // stage('Release') {
