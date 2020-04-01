@@ -36,9 +36,10 @@ pipeline {
 	}
     stage('Release') {
         steps {
-            dir('/var/jenkins_home/workspace/organizer/client/build') {
-                archiveArtifacts artifacts: '**', fingerprint: true
-            }
+            sh '''
+                cd client
+                docker cp CONTAINER:build /home/bytebaron/
+            '''
         }
     }
     }
