@@ -37,7 +37,7 @@ const Styles = styled.div`
     }
 `
 function App() {
-  const data = [
+  const currentData = [
     {time: "9:00", description: "Wake up and eat breakfast."}, 
     {time: "10:00", description: "123143."}, 
     {time: "11:00", description: "4324234"},
