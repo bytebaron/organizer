@@ -36,7 +36,7 @@ pipeline {
 	}
     stage('Release') {
         steps {
-            sshagent { 
+            sshagent (credentials: ['SSH-KEY']) { 
                 sh ('scp foo apache:/var/www/') 
             }
         }
