@@ -36,7 +36,9 @@ pipeline {
 	}
     stage('Release') {
         steps {
-            runDockerCommand()
+            sshagent { 
+                sh ('scp foo apache:/var/www/') 
+            }
         }
     }
     }
