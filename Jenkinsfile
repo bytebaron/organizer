@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:12'
+            image 'node:12-alpine'
             args '-p 3000:3000'
         }
     }
@@ -30,9 +30,9 @@ pipeline {
 		steps {
             sh '''
                 cd client
-                npm run build
+                ../jenkins/scripts/deliver.sh
             '''
-           // ../jenkins/scripts/deliver.sh
+           
 		}
 	}
     // stage('Release') {
