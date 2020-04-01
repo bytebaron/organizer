@@ -29,7 +29,6 @@ pipeline {
 	stage('Deliver') {
 		steps {
 		   sh '''
-			chown -R 1000 .
 		   	cd client
 			../jenkins/scripts/deliver.sh 
 			mv build /var/www
