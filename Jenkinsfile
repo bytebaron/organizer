@@ -36,8 +36,10 @@ pipeline {
 	}
     stage('Release') {
         steps {
-            sshagent (credentials: ['SSH-KEY']) { 
+            node {
+                sshagent (credentials: ['SSH-KEY']) { 
                 sh ('scp build apache:/var/www/') 
+                }
             }
         }
     }
