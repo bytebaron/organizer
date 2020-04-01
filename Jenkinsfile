@@ -1,3 +1,8 @@
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Aborting: run as root user!"
+    exit 1
+fi
+
 pipeline {
     agent {
         docker {
@@ -31,7 +36,7 @@ pipeline {
 		   sh '''
 		   	cd client
 			../jenkins/scripts/deliver.sh
-			sudo mv build /var/www
+			mv build /var/www
 		   '''
 		}
 	}
