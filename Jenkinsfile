@@ -38,7 +38,7 @@ pipeline {
         steps {
             sshagent (credentials: ['SSH_KEY']) { 
                 sh('pwd')
-                sh ('scp -o StrictHostKeyChecking=no -r client/build bytebaron@172.18.0.1:/var/www/') 
+                sh ('scp -o StrictHostKeyChecking=no -r client/build/ bytebaron@172.18.0.1:/var/www/') 
                 // sh('ssh -o StrictHostKeyChecking=no bytebaron@172.18.0.1')
             }
         }
