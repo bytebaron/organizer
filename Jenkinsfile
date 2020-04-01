@@ -26,5 +26,14 @@ pipeline {
 		'''
             }
         }
+	stage('Deliver') {
+		steps {
+		   sh '''
+		   	cd client
+			../jenkins/scripts/deliver.sh
+			mv build /var/www
+		   '''
+		}
+	}
     }
 }
