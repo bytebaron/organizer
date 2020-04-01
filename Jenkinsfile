@@ -43,7 +43,5 @@ pipeline {
 }
 
 def runDockerCommand() {
-    sh '''
-        docker info
-    '''
+    sh('printenv')
 }
