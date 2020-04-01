@@ -36,11 +36,14 @@ pipeline {
 	}
     stage('Release') {
         steps {
-            sh '''
-                cd client
-                docker cp CONTAINER:build /home/bytebaron/
-            '''
+            runDockerCommand()
         }
     }
     }
+}
+
+def runDockerCommand() {
+    sh '''
+        docker info
+    '''
 }
