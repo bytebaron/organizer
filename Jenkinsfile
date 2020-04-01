@@ -35,16 +35,18 @@ pipeline {
             '''
 		}
 	}
-    // stage('Release') {
-    //     steps {
-    //         sshagent (credentials: SSH_KEY) { 
-    //             sh ('scp build apache:/var/www/') 
-    //         }
-    //     }
-    // }
+    
     }
 }
 
 // def runDockerCommand() {
 //     sh('printenv')
 // }
+
+// stage('Release') {
+    //     steps {
+    //         sshagent (credentials: SSH_KEY) { 
+    //             sh ('scp build apache:/var/www/') 
+    //         }
+    //     }
+    // }
