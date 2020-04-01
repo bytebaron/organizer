@@ -37,7 +37,7 @@ pipeline {
     stage('Release') {
         steps {
             sshagent (credentials: ['SSH_KEY']) { 
-                sh ('scp -o StrictHostKeyChecking=no -r public/* bytebaron@172.18.0.1:/var/www/') 
+                sh ('scp -o StrictHostKeyChecking=no -r client/build bytebaron@172.18.0.1:/var/www/') 
             }
         }
     }
