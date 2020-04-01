@@ -34,5 +34,12 @@ pipeline {
             '''
 		}
 	}
+    stage('Release') {
+        steps {
+            dir('/var/jenkins_home/workspace/organizer/client/build') {
+                archiveArtifacts artifacts: '**', fingerprint: true
+            }
+        }
+    }
     }
 }
